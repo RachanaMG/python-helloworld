@@ -4,7 +4,7 @@ from io import StringIO
 
 class TestHelloWorld(unittest.TestCase):
   def test_print_output(self):
-    expected_output = "Hello world\n"
+    expected_output = "Hello, world\n"
 
     # Redirect stdout to a StringIO object
     stdout = sys.stdout
