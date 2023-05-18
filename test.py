@@ -11,7 +11,7 @@ class TestHelloWorld(unittest.TestCase):
     sys.stdout = StringIO()
 
     # Run the code that prints "Hello world"
-    exec(open("your_script.py").read())
+    exec(open("helloworld.py").read())
 
     # Get the printed output
     actual_output = sys.stdout.getvalue()
