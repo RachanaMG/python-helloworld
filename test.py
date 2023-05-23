@@ -1,5 +1,5 @@
 import unittest
-import Greeter from helloworld 
+import helloworld
 
 class MyTestCase(unittest.TestCase):
     def test_default_greeting_set(self):
