@@ -1,26 +1,10 @@
 import unittest
-import sys
-from io import StringIO
+from Experiment import Greeter
 
-class TestHelloWorld(unittest.TestCase):
-    def test_print_output(self):
-        expected_output = "Hello, world\n"
-
-        # Redirect stdout to a StringIO object
-        stdout = sys.stdout
-        sys.stdout = StringIO()
-
-        # Run the code that prints "Hello world"
-        exec(open("helloworld.py").read())
-
-        # Get the printed output
-        actual_output = sys.stdout.getvalue()
-
-        # Restore stdout
-        sys.stdout = stdout
-
-        # Compare the expected and actual outputs
-        self.assertEqual(actual_output, expected_output)
+class MyTestCase(unittest.TestCase):
+    def test_default_greeting_set(self):
+        greeter = Greeter()
+        self.assertEqual(greeter.message, 'Hello world!')
 
 if __name__ == '__main__':
     unittest.main()
